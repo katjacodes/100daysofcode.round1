@@ -1,0 +1,38 @@
+h1{
+        background: rgb(230, 255, 230);
+        font-size: 250%;
+    }
+
+header{
+	background: rgb(255, 204, 255);
+	text-align: center;
+}
+
+h1{
+	color: rgb(0, 204, 0);
+}
+
+nav{
+	font-variant: small-caps;
+	font-family: Rockwell;
+}
+
+h2{
+	background: rgb(255, 204, 255);
+	text-align: center;
+	color: rgb(102, 0, 102);
+	font-variant: small-caps;
+	font-family: Rockwell;
+}
+
+details{
+	font-style: italic;
+}
+
+summary{
+	font-style: normal;
+}
+
+footer{
+	background: rgb(230, 255, 230);
+}
