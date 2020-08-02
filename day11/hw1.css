@@ -1,0 +1,27 @@
+header{
+	background: rgb(128, 0, 0);
+}
+
+h1{
+	color: rgb(0, 240, 0);
+	font-variant: small-caps;
+	text-align: center;
+}
+
+h2{
+	color: rgb(0, 77, 0);
+	font-variant: small-caps;
+}
+
+section{
+	background: rgb(255, 204, 204);
+}
+
+a {
+	color: rgb(0, 51, 0);
+	background: rgb(204, 255, 204);
+}
+
+img{
+	display: none;
+}
