@@ -1,0 +1,13 @@
+header{
+	font-variant: small-caps;
+	text-align: center;
+}
+
+p{
+	background: #00AD3A;
+	width: 30%;
+	height: 90px;
+	display: inline-block;
+	float: center;
+	overflow: auto;
+}
