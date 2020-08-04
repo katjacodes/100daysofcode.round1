@@ -1,0 +1,55 @@
+body{
+        background: rgb(230, 255, 230);
+        font-size: 150%;
+        margin: 4%;
+    }
+
+header{
+	background: rgb(255, 204, 255);
+	text-align: center;
+	padding: 15px;
+}
+
+h1{
+	color: rgb(0, 204, 0);
+}
+
+nav{
+	font-variant: small-caps;
+	font-family: Rockwell;
+}
+
+h2{
+	background: rgb(255, 204, 255);
+	text-align: center;
+	color: rgb(102, 0, 102);
+	font-variant: small-caps;
+	font-family: Rockwell;
+}
+
+section{
+	width: 30%;
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+}
+
+details{
+	font-style: italic;
+}
+
+summary{
+	font-style: normal;
+}
+
+footer{
+	background: rgb(230, 255, 230);
+	clear: both;
+}
+
+img{
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+	width: 125px;
+}
