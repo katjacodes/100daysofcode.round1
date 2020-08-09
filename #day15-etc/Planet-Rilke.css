@@ -1,56 +1,80 @@
+body{
+  background-color: #003300;
+}
 
 header{
-	background-image: url(https://i.postimg.cc/sDzptXqr/Globes.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	padding: 60px;
-	text-align: center;
-	display: block;
-	font-family: Merriweather;
-  	font-size: 50px;
-  	color: #ffffe6;
+  background-image: url(https://i.postimg.cc/sDzptXqr/Globes.jpg../IMG/Globes.jpg…);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px;
+  text-align: center;
+  display: block;
+  font-family: Merriweather;
+  font-size: 50px;
+  color: #ffffe6;
 }
 
 h2{
-	font-family: Merriweather;
-  	font-size: 20px;
+  font-family: Merriweather;
+  font-size: 30px;
+  color: #ffffe6;
 }
 
-div{
-	width: 400px;
-	height: 450px;
-	padding: 10px;
-	margin-left: 100px;
-	margin-top: 100px;
-	margin-bottom: 100px;
-	border: dotted 10px #ffffe6;
-	display: inline-bloc;
-
-}
-
-p{
-	font-family: 'Montserrat', sans-serif;
+h3{
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #ffffcc;
 }
 
 main{
-	display: table;
-  	width: 100%;
-  	height: 100%;
+  display: table;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 80px;
 }
 
-nav{
-	display: table-cell;
-  	text-align: center;
-  	vertical-align:middle;
-  	line-height: 6em;
+.container{
+  justify-content: center;
+  display: flex;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.poem{
+  background-color: #004d00;
+  text-align: left;
+  width: 40%;
+  height: 500px;
+  overflow: auto;
+  padding-left: 30px;
+  border: dotted 10px #ffffe6;
+}
 
+p{
+  font-family: "Montserrat", sans-serif;
+  color: #ffffcc;
+}
 
+.nav{
+  text-align: right;
+  width: 50%;
+  vertical-align: center;
+  padding-top: 20px;
+  line-height: 8em;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-color: #ffffb3;
+}
 
-
-
-
-
-
-
+button{
+  width: 50%;
+  padding: 15px 32px;
+  font-size: 32px;
+  color: #003300;
+  background-image: linear-gradient(to bottom, #ff9966, #993300);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  cursor: pointer;
+}
