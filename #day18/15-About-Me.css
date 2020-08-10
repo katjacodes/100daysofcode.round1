@@ -1,0 +1,74 @@
+body{
+        background: rgb(230, 255, 230);
+        font-size: 150%;
+        margin: 4%;
+    }
+
+header{
+	background: rgb(255, 204, 255);
+	text-align: center;
+	padding: 15px;
+}
+
+h1{
+	color: rgb(230, 255, 230);
+}
+
+nav{
+	font-variant: small-caps;
+	font-family: Rockwell;
+}
+
+nav a{
+	width: 22%;
+	display: inline-block;
+	background: rgb(255, 204, 255);
+}
+
+h2{
+	background: rgb(255, 204, 255);
+	text-align: center;
+	color: rgb(102, 0, 102);
+	font-variant: small-caps;
+	font-family: Rockwell;
+}
+
+.half{
+	width: 45%;
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+}
+
+.whole{
+	clear: both;
+}
+
+details{
+	font-style: italic;
+}
+
+summary{
+	font-style: normal;
+}
+
+footer{
+	background: rgb(255, 204, 255);
+	clear: both;
+}
+
+header, footer{
+	background: rgb(255, 204, 255);
+	background: -moz-linear-gradient(rgb(255, 204, 255), rgb(0, 128, 0)); 
+	background: -webkit-linear-gradient(rgb(255, 204, 255), rgb(0, 128, 0));
+	background: -o-linear-gradient(rgb(255, 204, 255), rgb(0, 128, 0));
+	background: linear-gradient(rgb(255, 204, 255), rgb(0, 128, 0));
+
+}
+
+img{
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+	width: 125px;
+}
