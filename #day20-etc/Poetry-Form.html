@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poetry Form</title> 
+  <link rel="stylesheet" href="CSS/Planet-Rilke3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Planet Poetry</h1>
+    <p class="description"> Poetry in Translation</p>  
+  </header> 
+
+  <h1 id="request"> Submit a link to your favorite poem in any language.</h1>
+  <p id="explanation"> We&apos;ll look for translations into as many languages as possible.</p>
+
+    <form id="survey-form">
+    <div class="form-group">
+      <label id="title-label" for="title">Title</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        class="form-control"
+        placeholder="Enter the title of the poem"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label id="language-label" for="language">Language</label>
+      <input
+        type="text"
+        name="language"
+        id="language"
+        class="form-control"
+        placeholder="In what language was the poem written?"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label id="link-label" for="link">Link</label>
+      <input
+        type="text"
+        name="link"
+        id="link"
+        class="form-control"
+        placeholder="Share the link where we can find the poem"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label id="email-label" for="email">Email (optional)</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your email"/>
+    </div>
+
+    <div class="form-group">
+      <label id="place-label" for="email">Place of Residence (optional)</label>
+      <input
+        type="text"
+        name="place"
+        id="place"
+        class="form-control"
+        placeholder="Where do you live?"/>
+    </div>
+
+    <div class="form-group">
+      <p>Would you like to be notified when we add translations of the poem you shared?</p>
+        <label>
+          <input
+          name="notification"
+          value="yes"
+          type="radio"
+          class="input-radio"
+          checked
+        />Yes
+        </label>
+
+        <label>
+          <input
+          name="notification"
+          value="noe"
+          type="radio"
+          class="input-radio"
+        />No
+      </label>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
