@@ -1,12 +1,14 @@
+/*general*/
+
 body{
   background-color: #003300;
 }
 
-header{
+.header{
   background-image: url(https://i.postimg.cc/sDzptXqr/Globes.jpg../IMG/Globes.jpg.);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 60px;
+  padding: 40px;
   text-align: center;
   display: block;
   font-family: Merriweather;
@@ -14,11 +16,14 @@ header{
   color: #ffffe6;
 }
 
-h2{
+.description{
   font-family: Merriweather;
   font-size: 30px;
   color: #ffffe6;
 }
+
+
+/*Poem*/
 
 h3{
   font-family: Merriweather;
@@ -49,7 +54,8 @@ main{
   overflow: auto;
   padding-left: 30px;
   border: dotted 10px #ffffe6;
-  margin: 60px;
+  border-radius: 25px;
+  margin: 20px;
 }
 
 p{
@@ -108,3 +114,82 @@ p{
   background-image: linear-gradient(to bottom, #ff9966, #993300);
   border-radius: 50%;
 }
+
+
+/*Form*/
+
+#request{
+  font-family: Montserrat;
+  font-size: 30px;
+  color: #ffffe6;
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+
+#explanation{
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #ffffe6;
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+
+.form{
+  background-color: #004d00;
+  text-align: left;
+  width: 40%;
+  height: auto;
+  overflow: auto;
+  padding-left: 30px;
+  border: dotted 10px #ffffe6;
+  border-radius: 25px;
+  position: relative;
+  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=text], select, textarea{
+  width: 75%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label[for=title], label[for=language], label[for=link], label[for=email], label[for=residence], label[for=info]{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #ffffe6;
+  margin-top: 25px;
+}
+
+label.reply{
+  padding: 0 12px 12px 0;
+  display: inline-block;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #ffffe6;
+  margin-top: 10px;
+
+}
+
+#select{
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #ffffe6;
+  margin-top: 35px;
+} 
+
+
+
+
+
+

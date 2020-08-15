@@ -18,66 +18,58 @@
   <h1 id="request"> Submit a link to your favorite poem in any language.</h1>
   <p id="explanation"> We&apos;ll look for translations into as many languages as possible.</p>
 
-    <form id="survey-form">
-    <div class="form-group">
-      <label id="title-label" for="title">Title</label>
-      <input
-        type="text"
-        name="title"
-        id="title"
-        class="form-control"
-        placeholder="Enter the title of the poem"
-        required
-      />
+   <div class="form">
+    <div class="row">
+      <div class="col-25">
+        <label for="title">Title</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="title" name="title" placeholder="Enter the title of the poem" required/>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label id="language-label" for="language">Language</label>
-      <input
-        type="text"
-        name="language"
-        id="language"
-        class="form-control"
-        placeholder="In what language was the poem written?"
-        required
-      />
+    <div class="row">
+      <div class="col-25">
+        <label for="language">Language</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="language" name="language" placeholder="In what language was the poem written?" required/>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label id="link-label" for="link">Link</label>
-      <input
-        type="text"
-        name="link"
-        id="link"
-        class="form-control"
-        placeholder="Share the link where we can find the poem"
-        required
-      />
+    <div class="row">
+      <div class="col-25">
+        <label for="link">Link</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="link" name="link" placeholder="Share the link where we can find the poem" required/>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label id="email-label" for="email">Email (optional)</label>
-      <input
-        type="text"
-        name="email"
-        id="email"
-        class="form-control"
-        placeholder="Enter your email"/>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email (Optional)</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="email" placeholder="Enter your email"/>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label id="place-label" for="email">Place of Residence (optional)</label>
-      <input
-        type="text"
-        name="place"
-        id="place"
-        class="form-control"
-        placeholder="Where do you live?"/>
-    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="residence">Place of Residence (Optional)</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="residence" name="residence" placeholder="Enter your email"/>
+      </div>
 
-    <div class="form-group">
-      <p>Would you like to be notified when we add translations of the poem you shared?</p>
-        <label>
+    <div class="row">
+      <div class="col-25">
+        <label for="info">Would you like to be notified when we add translations of the poem you shared?</label>
+      </div>
+
+      <div class="col-75">
+        <label class="reply">
           <input
           name="notification"
           value="yes"
@@ -86,20 +78,23 @@
           checked
         />Yes
         </label>
+      </div>
 
-        <label>
+      <div class="col-75">
+        <label class="reply">
           <input
           name="notification"
-          value="noe"
+          value="yes"
           type="radio"
           class="input-radio"
+          checked
         />No
-      </label>
+        </label>
+      </div>
     </div>
 
-    <div class="form-group">
-      <button type="submit" id="submit" class="submit-button">
-        Submit
-      </button>
+    <div class="row">
+      <input type="submit" value="Submit">
     </div>
-  </form>
+  </div>
+</body>
