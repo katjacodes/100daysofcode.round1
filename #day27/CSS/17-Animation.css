@@ -16,6 +16,7 @@ body{
   height: 300px;
   margin-top: 150px;
   margin-right: 150px;
+  margin-left: 150px;
   animation: rotate 1s 0s infinite ease-in-out alternate;
   width: 300px;
 }
