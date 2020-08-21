@@ -21,7 +21,6 @@ body{
 h1{
 	color: rgb(0, 240, 0);
 	font-variant: small-caps;
-	text-align: top;
 	margin-bottom: 25px;
 }
 
@@ -101,7 +100,9 @@ table{
 	width: 75%;
 	display: block;
 	margin: 0 auto;
-
+	padding: 4px;
+	border-collapse: separate;
+	overflow: auto;
 }
 
 td{
@@ -118,6 +119,26 @@ td{
 	-o-border-radius: 2px;
 	text-shadow: 1px 1px rgb(255, 204, 204);
 
+}
+
+tr{
+	opacity: .8;
+}
+
+tr:hover{
+	opacity: 1;
+}
+
+tr td:nth-child(1){
+	text-align: left;
+}
+
+tr td:nth-child(2){
+	text-align: center;
+}
+
+tr td:nth-child(3){
+	text-align: center;
 }
 
 th{	
@@ -138,5 +159,4 @@ th{
   	-webkit-background-image: linear-gradient(to bottom right, rgb(0, 26, 0), rgb(0, 204, 0));
   	-moz-background-image: linear-gradient(to bottom right, rgb(0, 26, 0), rgb(0, 204, 0));
   	-o-background-image: linear-gradient(to bottom right, rgb(0, 26, 0), rgb(0, 204, 0));
-	
 }
