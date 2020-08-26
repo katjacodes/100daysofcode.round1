@@ -1,0 +1,33 @@
+body {
+	display: grid; 
+	grid-template-columns: repeat(3, 30%) 10%;
+	grid-template-rows: 20% 70% 10%;
+	grid-template-areas: 
+		"header header header header"
+		"poem-col1 poem-col2 poem-col3 nav"
+		"footer footer footer";
+}
+
+.header {
+	grid-area: header;
+}
+
+.poem-col1 {
+	grid-area: poem-col1;
+}
+
+.poem-col2 {
+	grid-area: poem-col2;
+}
+
+.poem-col3 {
+	grid-area: poem-col3;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.footer {
+	grid-area: footer;
+}
