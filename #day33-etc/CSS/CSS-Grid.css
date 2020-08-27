@@ -1,15 +1,31 @@
 body {
 	display: grid; 
-	grid-template-columns: repeat(3, 30%) 10%;
-	grid-template-rows: 20% 70% 10%;
+	justify-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 20% 10% 70% 10%;
 	grid-template-areas: 
 		"header header header header"
-		"poem-col1 poem-col2 poem-col3 nav"
-		"footer footer footer";
+		" nav nav nav nav"
+		"poem-col1 poem-col2 poem-col3 poem-col4"
+		"footer footer footer footer";
+	background-color: #003300;
 }
 
 .header {
 	grid-area: header;
+	background-image: url(https://i.postimg.cc/sDzptXqr/Globes.jpg../IMG/Globes.jpg.);
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	padding: 30px;
+  	text-align: center;
+  	display: block;
+  	font-family: Merriweather;
+  	font-size: 50px;
+  	color: #ffffe6;
+}
+
+.nav {
+	grid-area: nav;
 }
 
 .poem-col1 {
@@ -24,10 +40,39 @@ body {
 	grid-area: poem-col3;
 }
 
-.nav {
-	grid-area: nav;
+.poem-col4 {
+	grid-area: poem-col4;
 }
 
 .footer {
 	grid-area: footer;
+}
+
+.header p{
+  font-family: Merriweather;
+  font-size: 30px;
+  color: #ffffe6;
+}
+
+.poem-col2 h3{
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #e6e600;
+}
+
+.poem-col3 h3{
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #e6e600;
+}
+
+.poem-col4 h3{
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #e6e600;
+}
+
+.poem-col1, .poem-col2, .poem-col3, .poem-col4 p{
+  font-family: "Montserrat", sans-serif;
+  color:  #e6e600;
 }
