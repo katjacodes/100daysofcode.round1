@@ -1,14 +1,14 @@
 /*general*/
 
-body{
+.body-1 {
   background-color: #003300;
 }
 
-.header{
+.header-1 {
   background-image: url(https://i.postimg.cc/sDzptXqr/Globes.jpg../IMG/Globes.jpg.);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 40px;
+  padding: 30px;
   text-align: center;
   display: block;
   font-family: Merriweather;
@@ -16,7 +16,7 @@ body{
   color: #ffffe6;
 }
 
-.description{
+.description {
   font-family: Merriweather;
   font-size: 30px;
   color: #ffffe6;
@@ -25,28 +25,29 @@ body{
 
 /*Poem*/
 
-h3{
+h3 {
   font-family: Merriweather;
   font-size: 20px;
-  color: #ffffcc;
+  color: #e6e600;
 }
 
-main{
+main {
   display: table;
   width: 100%;
   margin-top: 150px;
   margin-bottom: 80px;
 }
 
-.container{
+.container {
   justify-content: center;
   display: flex;
   width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -30px;
 }
 
-.poem{
+.poem {
   background-color: #004d00;
   text-align: left;
   width: 40%;
@@ -58,23 +59,24 @@ main{
   margin: 20px;
 }
 
-p{
+p {
   font-family: "Montserrat", sans-serif;
-  color: #ffffcc;
+  color:  #e6e600;
 }
 
-.nav{
+.nav-1 {
   text-align: right;
   width: 50%;
   vertical-align: center;
   padding-top: 20px;
+  margin-top: 20px;
   line-height: 8em;
   font-family: Montserrat;
   font-weight: bold;
-  font-color: #ffffb3;
+  color: #ffffb3;
 }
 
-.nav>button{
+.nav-1 button {
   width: 50%;
   padding: 15px 32px;
   font-size: 32px;
@@ -87,19 +89,20 @@ p{
 }
 
 
-.bottom{
+.bottom {
   display: flex;
   margin-top: 50px;
   justify-content: center;
   align-items: center;
 }
 
-.bottom button{
+#favorite {
   padding: 15px 32px;
   font-size: 32px;
   color: #003300;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   background-image: linear-gradient(to bottom, #ffffe6, #e6e600);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
@@ -110,33 +113,32 @@ p{
   transition-timing-function: linear;
 }
 
-.bottom button:hover{
+#favorite:hover {
   background-image: linear-gradient(to bottom, #ff9966, #993300);
-  border-radius: 50%;
 }
 
 
 /*Form*/
 
-#request{
+#request {
   font-family: Montserrat;
   font-size: 30px;
-  color: #ffffe6;
+  color: #e6e600;
   text-align: center;
   position: relative;
-  top: 40px;
+  top: 50px;
 }
 
 #explanation{
   font-family: Montserrat;
   font-size: 20px;
-  color: #ffffe6;
+  color: #e6e600;
   text-align: center;
   position: relative;
-  top: 40px;
+  top: 50px;
 }
 
-.form{
+.form {
   background-color: #004d00;
   text-align: left;
   width: 40%;
@@ -146,13 +148,13 @@ p{
   border: dotted 10px #ffffe6;
   border-radius: 25px;
   position: relative;
-  top: 50px;
+  top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
 
-input[type=text], select, textarea{
-  width: 75%;
+input[type=text], select, textarea {
+  width: 85%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -171,7 +173,7 @@ label[for=title], label[for=language], label[for=link], label[for=email], label[
   margin-top: 25px;
 }
 
-label.reply{
+label.reply {
   padding: 0 12px 12px 0;
   display: inline-block;
   font-family: Montserrat;
@@ -181,15 +183,209 @@ label.reply{
 
 }
 
-#select{
+#select {
   font-family: Montserrat;
   font-size: 20px;
   color: #ffffe6;
   margin-top: 35px;
 } 
 
+#translation {
+  padding: 15px 32px;
+  font-size: 32px;
+  color: #003300;
+  margin: 10px auto 25px auto;
+  display: block;
+  background-image: linear-gradient(to bottom, #ffffe6, #e6e600);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  cursor: pointer;
+  transition-property: background, border-radius;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+#translation:hover {
+  background-image: linear-gradient(to bottom, #ff9966, #993300);
+}
 
 
+/*Translations*/
 
+.body-2 {
+  display: grid; 
+  justify-items: center;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 10% 70% 10%;
+  grid-template-areas: 
+    "header header header header"
+    " nav nav nav nav"
+    ". poem-col00 poem-col0 ."
+    "poem-col1 poem-col2 poem-col3 poem-col4"
+    "footer footer footer footer";
+  background-color: #003300;
+}
 
+.header-2 {
+  grid-area: header;
+  background-image: url(https://i.postimg.cc/sDzptXqr/Globes.jpg../IMG/Globes.jpg.);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 60px 30px 60px;
+  text-align: center;
+  display: block;
+  font-family: Merriweather;
+  font-size: 50px;
+  color: #ffffe6;
+}
 
+.nav-2 {
+  grid-area: nav;
+}
+
+.poem-col0 {
+  grid-area: poem-col0;
+  overflow: auto;
+  grid-column: 2 / span 2;
+  background-color: #004d00;
+  padding: 30px;
+  border: dotted 10px #ffffe6;
+  border-radius: 25px;
+}
+
+.poem-col1 {
+  grid-area: poem-col1;
+  overflow: auto;
+}
+
+.poem-col2 {
+  grid-area: poem-col2;
+  overflow: auto;
+}
+
+.poem-col3 {
+  grid-area: poem-col3;
+  overflow: auto;
+}
+
+.poem-col4 {
+  grid-area: poem-col4;
+  overflow: auto;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.header p {
+  font-family: Merriweather;
+  font-size: 30px;
+  color: #ffffe6;
+}
+
+.poem-col0 h3 {
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #e6e600;
+}
+
+.poem-col1 h3 {
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #ffffe6;
+}
+
+.poem-col2 h3 {
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #ffffe6;
+}
+
+.poem-col3 h3 {
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #ffffe6;
+}
+
+.poem-col4 h3 {
+  font-family: Merriweather;
+  font-size: 20px;
+  color: #ffffe6;
+}
+
+.poem-col0 h4 {
+  font-family: Merriweather;
+  font-size: 16px;
+  color: #e6e600;
+}
+
+.poem-col1 h4 {
+  font-family: Merriweather;
+  font-size: 16px;
+  color: #ffffe6;
+}
+
+.poem-col2 h4 {
+  font-family: Merriweather;
+  font-size: 16px;
+  color: #ffffe6;
+}
+
+.poem-col3 h4 {
+  font-family: Merriweather;
+  font-size: 16px;
+  color: #ffffe6;
+}
+
+.poem-col4 h4 {
+  font-family: Merriweather;
+  font-size: 16px;
+  color: #ffffe6;
+}
+
+.poem-col0 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #e6e600; 
+}
+
+.poem-col1 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #ffffe6;
+}
+
+.poem-col2 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #ffffe6;
+}
+
+.poem-col3 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #ffffe6;
+}
+
+.poem-col4 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #ffffe6;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #ffffe6;
+}
+
+a:visited {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #e6e600;
+}
