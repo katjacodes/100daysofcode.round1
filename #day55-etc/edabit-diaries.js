@@ -22,3 +22,18 @@ function isSameNum(num1, num2) {
 			return false;
 	}
 }
+
+/* Converting Minutes into Seconds*/
+function convert(minutes) {
+	return minutes * 60;
+}
+
+/*Equality Check*/
+function checkEquality(a, b) {
+  if (a === b) {
+		return true;
+	} else {
+			return false;
+	}
+}
+
