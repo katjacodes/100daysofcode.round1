@@ -37,3 +37,12 @@ function checkEquality(a, b) {
 	}
 }
 
+/*Find the Second Largest Number*/
+function secondLargest(arr) {
+	var max = Math.max.apply(null, arr);
+        maxi = arr.indexOf(max);
+    arr[maxi] = -Infinity; 
+    var secondMax = Math.max.apply(null, arr);  
+    arr[maxi] = max;
+    return secondMax;
+};
