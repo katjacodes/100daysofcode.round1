@@ -7,6 +7,7 @@
 </head>
 
 <body>
+	<!--reated a string-->
 	<div style="color:#993366; font-size:40px; font-family: Courier New">
 		<script>
 			var subject = "The purple horse ";
@@ -16,6 +17,7 @@
 		</script>
 	</div>
 
+	<!--Used escape sequences in a string-->
 	<div>
 		<script>
 			var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
@@ -23,6 +25,7 @@
 		</script>
 	</div>
 
+	<!--Created a string by adding one variable to another one-->
 	<div style="color:#009933; font-size:40px; font-family: Courier New">
 		<script>
 			var myStr = "The green horse likes to dance as well. ";
@@ -30,6 +33,7 @@
 		</script>
 	</div>
 
+	<!--Determined the length of a variable*-->
 	<div>
 		<script>
 			var lastNameLength = 0;
@@ -38,14 +42,16 @@
 		</script>
 	</div>
 
+	<!--Determined the first character of a variable*-->
 	<div>
 		<script>
 			var firstLetterOfLastName = "";
 			var lastName = "Lovelace";
-			console.log = (lastName[0]);
+			console.log(lastName[0]);
 		</script>
 	</div>
 
+	<!--Created a string combining differet variables and strings-->
 	<div style="color:#800000; font-size:40px; font-family: Courier New">
 		<script>
 			var myNoun = "dog";
@@ -58,6 +64,31 @@
 		</script>
 	</div>
 
+	<!--Determined the first variabe in an array-->
+	<div>
+		<script>
+			var myArray = [50,60,70];
+			/*console.log = myArray[0];*/ // need to fix
+		</script>
+	</div>
+
+	<!--Selected a specific element from a multidimensional array_-->
+	<div>
+		<script>
+			var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+			/*console.log = myArray[2][1];*/ // need to fix
+		</script>
+	</div>
+
+	<!--Selected a specific element from a multidimensional array-->
+	<div>
+		<script>
+			var myArray = [["John", 23], ["cat", 2]];
+			var removedFromMyArray = myArray.pop();
+			/*console.log(removedFromMyArray); 
+			console.log(myArray);*/ // need to fix
+		</script>
+	</div>
 
 </body>
 </html>
