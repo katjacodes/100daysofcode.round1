@@ -68,3 +68,68 @@ end
 
 puts larger_number(42, 28)   # => 42
 puts larger_number(99, 100)  # => 100
+
+
+# Write a method longer_string(str1, str2) that takes in two strings and returns the longer of the two strings. In the case of a tie, the method should return the first string.
+
+def longer_string(str1, str2)
+  if str1.length > str2.length
+    return str1
+  elsif str2.length > str1.length
+    return str2
+  else 
+    return str1
+  end
+end
+
+puts longer_string("app", "academy") # => "academy"
+puts longer_string("summer", "fall") # => "summer"
+puts longer_string("hello", "world") # => "hello"
+
+
+# Write a method number_check(num) that takes in a number and returns a string. The method should return the string 'positive' if the num is positive, 'negative' if the num is negative, and 'zero' if the num is zero.
+
+def number_check(num)
+  if num > 0
+    return "positive"
+  elsif num < 0
+    return "negative"
+  else
+    return "zero"
+  end
+end
+
+puts number_check(5)    # => "positive"
+puts number_check(-2)   # => "negative"
+puts number_check(0)    # => "zero"
+
+
+# Write a method word_check(word) that takes in a word and returns a string. The method should return the string "long" if the word is longer than 6 characters, "short" if it is less than 6 characters, and "medium" if it is exactly 6 characters long.
+
+def word_check(word)
+  if word.length > 6
+    return "long"
+  elsif word.length < 6
+    return "short"
+  else
+    return "medium"
+  end
+end
+
+puts word_check("contraption") # => "long"
+puts word_check("fruit")       # => "short"
+puts word_check("puzzle")      # => "medium"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
