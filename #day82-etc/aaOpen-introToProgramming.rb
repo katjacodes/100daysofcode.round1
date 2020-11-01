@@ -199,3 +199,73 @@ end
 
 puts sum_nums(4) # => 10, because 1 + 2 + 3 + 4 = 10
 puts sum_nums(5) # => 15
+
+
+# Write a method factorial(num) that takes in a number num and returns the product of all numbers from 1 up to and including num.
+
+def factorial(num)
+  product = 1 
+
+  i = 1
+  while i <= num
+    product *= i
+    
+    i += 1
+  end 
+
+  return product
+end
+
+puts factorial(3) # => 6, because 1 * 2 * 3 = 6
+puts factorial(5) # => 120, because 1 * 2 * 3 * 4 * 5 = 120
+
+
+# Write a method is_palindrome(word) that takes in a string word and returns the true if the word is a palindrome, false otherwise. A palindrome is a word that is spelled the same forwards and backwards.
+
+def is_palindrome(word)
+forwards = ""
+backwards = ""
+  
+  i = 0
+  while i < word.length
+    char = word[i]
+    forwards = forwards + char
+    backwards = char + backwards
+
+    i += 1
+  end
+  
+  if forwards == backwards
+    return "true"
+  else
+    return "false"
+  end
+end
+    
+puts is_palindrome("racecar")  # => true
+puts is_palindrome("kayak")    # => true
+puts is_palindrome("bootcamp") # => false
+
+# OR
+
+def is_palindrome(word)
+  reversed = ""
+
+  i = 0
+  while i < word.length
+    char = word[i]
+    reversed = char + reversed
+
+    i += 1
+  end
+
+  if word == reversed
+  return "true"
+  else
+    return "false"
+  end
+end
+
+puts is_palindrome("racecar")  # => true
+puts is_palindrome("kayak")    # => true
+puts is_palindrome("bootcamp") # => false
