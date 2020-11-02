@@ -21,6 +21,8 @@ puts goodbye("Mark")     # => "Bye Mark."
 puts goodbye("Beyonce")  # => "Bye Beyonce."
 
 
+#Conditinoals
+
 # Write a method is_div_by_5(number) that takes in a number and returns the boolean true if the given number is divisible by 5, false otherwise
 
 def is_div_by_5(number)
@@ -120,6 +122,8 @@ puts word_check("contraption") # => "long"
 puts word_check("fruit")       # => "short"
 puts word_check("puzzle")      # => "medium"
 
+
+#Loops
 
 # Write a method count_e(word) that takes in a string word and returns the number of e's in the word
 
@@ -269,3 +273,24 @@ end
 puts is_palindrome("racecar")  # => true
 puts is_palindrome("kayak")    # => true
 puts is_palindrome("bootcamp") # => false
+
+
+# Arrays
+
+# Write a method doubler(numbers) that takes an array of numbers and returns a new array where every element of the original array is multiplied by 2.
+
+def doubler(numbers)
+    i = 0
+  while i < numbers.length
+    puts numbers[i] * 2
+    
+    i += 1
+  end
+end
+
+print doubler([1, 2, 3, 4]) # => [2, 4, 6, 8]
+puts
+print doubler([7, 1, 8])    # => [14, 2, 16]
+
+
+
