@@ -358,3 +358,44 @@ print even_nums(10) # => [0, 2, 4, 6, 8, 10]
 puts
 print even_nums(5)  # => [0, 2, 4]
 
+
+# Write a method range(min, max) that takes in two numbers min and max. The method should return an array containing all numbers from min to max inclusive.
+
+def range(min, max)
+  all_numbers = []
+  
+  i = min
+  while i <= max
+    all_numbers << i
+    
+    i += 1
+  end
+  
+  return all_numbers
+end
+
+print range(2, 7)   # => [2, 3, 4, 5, 6, 7]
+puts
+print range(13, 20) # => [13, 14, 15, 16, 17, 18, 19, 20]
+
+
+# Write a method odd_range(min, max) that takes in two numbers min and max. The method should return an array containing all odd numbers from min to max (inclusive).
+
+def odd_range(min, max)
+  odd_numbers = []
+  
+  i = min
+  while i <= max
+    if i % 2 == 1
+      odd_numbers << i
+    end
+    
+    i += 1
+  end
+  
+  return odd_numbers
+end
+
+print odd_range(11, 18) # => [11, 13, 15, 17]
+puts
+print odd_range(3, 7)   # => [3, 5, 7]
