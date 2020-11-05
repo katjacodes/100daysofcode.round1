@@ -399,3 +399,42 @@ end
 print odd_range(11, 18) # => [11, 13, 15, 17]
 puts
 print odd_range(3, 7)   # => [3, 5, 7]
+
+
+# Write a method reverse_range(min, max) that takes in two numbers min and max. The function should return an array containing all numbers from min to max in reverse order. The min and max should be excluded from the array
+
+def reverse_range(min, max)
+  reverse_numbers = []
+  
+  i = max - 1
+  while i > min
+    reverse_numbers << i
+    
+    i -= 1
+  end
+  
+  return reverse_numbers
+end
+
+print reverse_range(10, 17) # => [16, 15, 14, 13, 12, 11]
+puts
+
+
+# Write a method first_half(array) that takes in an array and returns a new array containing the first half of the elements in the array. If there is an odd number of elements, return the first half including the middle element.
+
+def first_half(array)
+  elements = []
+  
+  i = 0
+  while i <= array.length / 2.0
+    elements << array[i]
+    
+    i += 1
+  end
+  
+  return elements
+end
+
+print first_half(["Brian", "Abby", "David", "Ommi"]) # => ["Brian", "Abby"]
+puts
+print first_half(["a", "b", "c", "d", "e"])          # => ["a", "b", "c"]
