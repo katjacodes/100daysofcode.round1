@@ -438,3 +438,52 @@ end
 print first_half(["Brian", "Abby", "David", "Ommi"]) # => ["Brian", "Abby"]
 puts
 print first_half(["a", "b", "c", "d", "e"])          # => ["a", "b", "c"]
+
+# Write a method factors_of(num) that takes in a num and returns an array of all positive numbers less than or equal to num that can divide num.
+
+def factors_of(num)
+  divide_by = []
+  
+  i = 1
+  while i <= num
+    if num % i == 0
+      divide_by << i
+    end
+    
+    i += 1
+  end
+  
+  return divide_by
+end
+
+print factors_of(3)   # => [1, 3]
+puts
+print factors_of(4)   # => [1, 2, 4]
+puts
+print factors_of(8)   # => [1, 2, 4, 8]
+puts
+print factors_of(9)   # => [1, 3, 9]
+puts
+print factors_of(16)  # => [1, 2, 4, 8, 16]
+
+
+# Write a method select_odds(numbers) that takes in an array of numbers and returns a new array containing the odd numbers of the original array.
+
+def select_odds(numbers)
+  odd_numbers = []
+  
+  i = 0
+  while i < numbers.length
+    if numbers [i] % 2 == 1
+      odd_numbers << numbers [i]
+    end
+    
+    i += 1
+  end
+  
+  return odd_numbers
+end
+
+print select_odds([13, 4, 3, 7, 6, 11]) # => [13, 3, 7, 11]
+puts
+print select_odds([2, 4, 6])            # => []
