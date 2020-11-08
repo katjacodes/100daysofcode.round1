@@ -487,3 +487,100 @@ end
 print select_odds([13, 4, 3, 7, 6, 11]) # => [13, 3, 7, 11]
 puts
 print select_odds([2, 4, 6])            # => []
+
+
+# Write a method select_long_words(words) that takes in an array of words and returns a new array containing all of the words of the original array that are longer than 4 characters.
+
+def select_long_words(words)
+  long_words = []
+  
+  i = 0
+  while i < words.length
+    if words[i].length > 4
+      long_words << words[i]
+    end
+    
+    i += 1
+  end
+    
+  return long_words
+end
+  
+print select_long_words(["what", "are", "we", "eating", "for", "dinner"]) # => ["eating", "dinner"]
+puts
+print select_long_words(["keep", "coding"])  
+
+
+# Write a method sum_elements(arr1, arr2) that takes in two arrays. The method should return a new array containing the results of adding together corresponding elements of the original arrays. You can assume the arrays have the same length.
+
+def sum_elements(arr1, arr2)
+  sum_array = []
+  
+  i = 0
+  while i < arr1.length
+    sum_array << arr1[i] + arr2[i]
+    
+    i += 1
+  end
+    
+  return sum_array
+end
+
+print sum_elements([7, 4, 4], [3, 2, 11])                            # => [10, 6, 15]
+puts
+print sum_elements(["cat", "pizza", "boot"], ["dog", "pie", "camp"]) # => ["catdog", "pizzapie", "bootcamp"]
+
+
+# Write a method fizz_buzz(max) that takes in a number max and returns an array containing all numbers greater than 0 and less than max that are divisible by either 4 or 6, but not both.
+
+def fizz_buzz(max)
+  new_array = []
+  
+  i = 0
+  while i <= max
+    if (i % 4 == 0 && i % 6 != 0) || (i % 6 == 0 && i % 4 != 0)
+      new_array << i
+    end
+    
+    i += 1
+  end
+  
+  return new_array
+end
+
+print fizz_buzz(20) # => [4, 6, 8, 16, 18]
+puts
+print fizz_buzz(15) # => [4, 6, 8]
+
+#OR
+
+def fizz_buzz(max)
+  nums = []
+
+  i = 0
+  while (i < max)
+    if (i % 4 == 0 || i % 6 == 0) && !(i % 4 == 0 && i % 6 == 0)
+      nums << i
+    end
+
+    i += 1
+  end
+
+  return nums
+end
+
+print fizz_buzz(20) # => [4, 6, 8, 16, 18]
+puts
+print fizz_buzz(15) # => [4, 6, 8]
+
+
+
+
+
+
+
+
+
+
+
+
