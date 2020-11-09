@@ -574,13 +574,8 @@ puts
 print fizz_buzz(15) # => [4, 6, 8]
 
 
+# Combining .split & .join = replacing characters
 
-
-
-
-
-
-
-
-
-
+str = "follow the yellow brick road"
+print str.split("l").join("Z")
+puts
