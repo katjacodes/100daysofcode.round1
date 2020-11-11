@@ -439,6 +439,7 @@ print first_half(["Brian", "Abby", "David", "Ommi"]) # => ["Brian", "Abby"]
 puts
 print first_half(["a", "b", "c", "d", "e"])          # => ["a", "b", "c"]
 
+
 # Write a method factors_of(num) that takes in a num and returns an array of all positive numbers less than or equal to num that can divide num.
 
 def factors_of(num)
@@ -579,3 +580,19 @@ print fizz_buzz(15) # => [4, 6, 8]
 str = "follow the yellow brick road"
 print str.split("l").join("Z")
 puts
+
+
+# Enumerables& Ranges
+
+# Write a method to_initials that takes in a person's name string and returns a string representing their initials.
+
+def to_initials(name)
+  parts = name.split(" ")
+  initials = ""
+  parts.each { |part| initials += part[0] }
+  return initials
+end
+
+puts to_initials("Kelvin Bridges")      # => "KB"
+puts to_initials("Michaela Yamamoto")   # => "MY"
+puts to_initials("Mary La Grange")      # => "MLG"
