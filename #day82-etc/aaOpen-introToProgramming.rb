@@ -631,3 +631,20 @@ end
 
 puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
 puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
+
+
+# Write a method format_name that takes in a name string and returns the name properly capitalized.
+
+def format_name(str)
+  names = str.split(" ")
+  formatted_names = []
+  
+  names.each do |name|
+    formatted_names << name[0].upcase + name[1..-1].downcase
+  end
+
+  return formatted_names.join(" ")
+end
+
+puts format_name("chase WILSON") # => "Chase Wilson"
+puts format_name("brian CrAwFoRd scoTT") # => "Brian Crawford Scott"
