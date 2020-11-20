@@ -707,3 +707,71 @@ puts is_valid_email("jdoegmail.com")    # => false
 puts is_valid_email("az@email")         # => false
 
 
+# Write a method reverse_words that takes in a sentence string and returns the sentence with the order of the characters in each word reversed. Note that we need to reverse the order of characters in the words, do not reverse the order of words in the sentence.
+
+def reverse_words(sent)
+  letters = sent.split("")
+  sent_array = []
+  
+  sent_array += letters
+  
+  reverse_sent_array = sent_array.reverse!
+  
+  new_sent = reverse_sent_array.join 
+  new_words =  new_sent.split(" ")
+  
+  final_sent = new_words.reverse!
+  
+  print final_sent.join(" ")
+end
+
+puts reverse_words('keep coding') # => 'peek gnidoc'
+puts reverse_words('simplicity is prerequisite for reliability') # => 'yticilpmis si etisiuqererp rof ytilibailer'
+
+#OR
+
+def reverse_words(sent)
+  words = sent.split(" ")
+  new_words = []
+  words.each { |word| new_words << word.reverse }
+  new_sent = new_words.join(" ")
+  return new_sent
+end
+
+puts reverse_words('keep coding') # => 'peek gnidoc'
+puts reverse_words('simplicity is prerequisite for reliability') # => 'yticilpmis si etisiuqererp rof ytilibailer'
+
+
+# Write a method rotate_array that takes in an array and a number. The method should return the array after rotating the elements the specified number of times. A single rotation takes the last element of the array and moves it to the front.
+
+def rotate_array(arr, num)
+  
+  removed =  arr.pop(num)
+  
+  new_arr = removed += arr
+  
+  print new_arr
+end
+
+print rotate_array([ "Matt", "Danny", "Mashu", "Matthias" ], 1) # => [ "Matthias", "Matt", "Danny", "Mashu" ]
+puts
+
+print rotate_array([ "a", "b", "c", "d" ], 2) # => [ "c", "d", "a", "b" ]
+puts
+
+# OR
+
+def rotate_array(arr, num)
+  num.times do
+    ele = arr.pop
+    arr.unshift(ele)
+  end
+
+  return arr
+end
+
+print rotate_array([ "Matt", "Danny", "Mashu", "Matthias" ], 1) # => [ "Matthias", "Matt", "Danny", "Mashu" ]
+puts
+
+print rotate_array([ "a", "b", "c", "d" ], 2) # => [ "c", "d", "a", "b" ]
+puts
