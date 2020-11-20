@@ -659,7 +659,7 @@ def is_valid_name(str)
   end
 
   parts.each do |part|
-    if !is_capitalized(part)
+    if !(part[0] == part[0].upcase && part[1..-1] == part[1..-1].downcase)
       return false
     end
   end
@@ -667,15 +667,43 @@ def is_valid_name(str)
   return true
 end
 
-def is_capitalized(word)
-  if word[0] == word[0].upcase && word[1..-1] == word[1..-1].downcase
+puts is_valid_name("Kush Patel")       # => true
+puts is_valid_name("Daniel")           # => false
+puts is_valid_name("Robert Downey Jr") # => true
+puts is_valid_name("ROBERT DOWNEY JR") # => false
+
+
+# Write a method is_valid_email that takes in a string and returns a boolean indicating whether or not it is a valid email address.
+
+def is_valid_email(str)
+  parts = str.split("@")
+
+  if parts.length != 2
+    return false
+  end
+
+  first = parts[0]
+  second = parts[1]
+  alpha = "abcdefghijklmnopqrstuvwxyz"
+
+  first.each_char do |char|
+    if !alpha.include?(char)
+      return false
+    end
+  end
+
+  if second.split('.').length == 2
     return true
   else
     return false
   end
 end
 
-puts is_valid_name("Kush Patel")       # => true
-puts is_valid_name("Daniel")           # => false
-puts is_valid_name("Robert Downey Jr") # => true
-puts is_valid_name("ROBERT DOWNEY JR") # => false
+puts is_valid_email("abc@xy.z")         # => true
+puts is_valid_email("jdoe@gmail.com")   # => true
+puts is_valid_email("jdoe@g@mail.com")  # => false
+puts is_valid_email("jdoe42@gmail.com") # => false
+puts is_valid_email("jdoegmail.com")    # => false
+puts is_valid_email("az@email")         # => false
+
+
