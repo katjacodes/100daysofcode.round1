@@ -775,3 +775,50 @@ puts
 
 print rotate_array([ "a", "b", "c", "d" ], 2) # => [ "c", "d", "a", "b" ]
 puts
+
+
+# Nested Loops & 2d Arrays
+
+# Write a method combinations that takes in an array of unique elements, the method should return a 2D array representing all possible combinations of 2 elements of the array.
+
+def combinations(arr)
+  new_array = []
+  
+  arr.each_with_index do |ele1, idx1|
+    arr.each_with_index do |ele2, idx2|
+      if idx2 > idx1
+        new_array << [ele1, ele2]
+      end
+    end
+  end
+  
+  return new_array
+end
+
+print combinations(["a", "b", "c"]); # => [ [ "a", "b" ], [ "a", "c" ], [ "b", "c" ] ]
+puts
+
+print combinations([0, 1, 2, 3]); # => [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ]
+puts
+
+
+# Write a method opposite_count that takes in an array of unique numbers. The method should return the number of pairs of elements that sum to 0.
+
+def opposite_count(nums)
+  count = 0
+  
+  nums.each_with_index do |ele1, idx1|
+    nums.each_with_index do |ele2, idx2|
+      if idx2 > idx1 && ele1 + ele2 == 0
+      count +=1
+      end
+    end
+  end
+  print count
+end
+     
+puts opposite_count([ 2, 5, 11, -5, -2, 7 ]) # => 2
+puts opposite_count([ 21, -23, 24 -12, 23 ]) # => 1
+
+
+
