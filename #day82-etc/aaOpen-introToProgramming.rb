@@ -821,4 +821,88 @@ puts opposite_count([ 2, 5, 11, -5, -2, 7 ]) # => 2
 puts opposite_count([ 21, -23, 24 -12, 23 ]) # => 1
 
 
+# Write a method two_d_Sum that takes in a two dimensional array and returns the sum of all elements in the array.
+
+def two_d_sum(arr)
+  total = 0
+
+  arr.each do |sub_array|
+    sub_array.each do |num|
+      total += num
+    end
+  end
+
+  return total
+end
+
+array_1 = [
+  [4, 5],
+  [1, 3, 7, 1]
+]
+puts two_d_sum(array_1)    # => 21
+
+array_2 = [
+  [3, 3],
+  [2],
+  [2, 5]
+]
+puts two_d_sum(array_2)    # => 15
+
+
+# Write a method two_d_translate that takes in a 2 dimensional array and translates it into a 1 dimensional array. You can assume that the inner arrays always have 2 elements. See the examples.
+
+def two_d_translate(arr)
+  new_arr = []
+
+  arr.each do |subArray|
+    ele = subArray[0]
+    num = subArray[1]
+
+    num.times { new_arr << ele }
+  end
+
+  return new_arr
+end
+
+arr_1 = [
+  ['boot', 3],
+  ['camp', 2],
+  ['program', 0]
+]
+
+print two_d_translate(arr_1) # => [ 'boot', 'boot', 'boot', 'camp', 'camp' ]
+puts
+
+arr_2 = [
+  ['red', 1],
+  ['blue', 4]
+]
+
+print two_d_translate(arr_2) # => [ 'red', 'blue', 'blue', 'blue', 'blue' ]
+puts
+
+
+# Write a method array_translate that takes in an array whose elements alternate between words and numbers. The method should return a string where each word is repeated the number of times that immediately follows in the array.
+
+def array_translate(array)
+  new_arr = []
+  
+   array.each_with_index do |subArray, idx|
+    if idx % 2 == 1
+      subArray = ele
+    else
+      subArray = num
+      
+      #num.times { new_arr << ele }
+    end
+   end
+
+    #return new_arr
+end
+
+print array_translate(["Cat", 2, "Dog", 3, "Mouse", 1]); # => "CatCatDogDogDogMouse"
+puts
+
+print array_translate(["red", 3, "blue", 1]); # => "redredredblue"
+puts
 
