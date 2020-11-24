@@ -971,3 +971,89 @@ end
 
 puts word_lengths("this is fun") #=> {"this"=>4, "is"=>2, "fun"=>3}
 puts word_lengths("When in doubt, leave it out") #=> {"When"=>4, "in"=>2, "doubt,"=>6, "leave"=>5, "it"=>2, "out"=>3}
+
+
+# Write a method cat_builder that takes in a name, color, and age. The method should return a hash representing a cat with those values.
+
+def cat_builder(name_str, color_str, age_num)
+  return { "name"=>name_str, "color"=>color_str, "age"=>age_num }
+end
+
+print cat_builder("Whiskers", "orange", 3) #=> {"name"=>"Whiskers", "color"=>"orange", "age"=>3}
+puts
+
+print cat_builder("Salem", "black", 100) #=> {"name"=>"Salem", "color"=>"black", "age"=>100}
+puts
+
+
+# Write a method ae_count that takes in a string and returns a hash containing the number of a's and e's in the string. Assume the string contains only lowercase characters.
+
+def ae_count(str)
+  count = {"a"=>0, "e"=>0}
+
+  str.each_char do |char|
+    if (char == "a" || char == "e")
+      count[char] += 1
+    end
+  end
+
+  return count
+end
+
+puts ae_count("everyone can program") #=> {"a"=>2, "e"=>3}
+puts ae_count("keyboard") #=> {"a"=>1, "e"=>1}
+
+
+# Write a method element_count that takes in an array and returns a hash representing the count of each element in the array.
+
+def element_count(arr)
+  
+  counter = Hash.new(0)
+    arr.each { |ele| counter[ele] += 1 }
+    return counter
+end
+
+puts element_count(["a", "b", "a", "a", "b"]) #=> {"a"=>3, "b"=>2}
+puts element_count(["red", "red", "blue", "green"]) #=> {"red"=>2, "blue"=>1, "green"=>1}
+
+
+# Write a method select_upcase_keys that takes in a hash and returns a new hash containing key-value pairs of the original hash that had uppercase keys. You can assume that the keys will always be strings.
+
+def select_upcase_keys(hash)
+  selected = {}
+
+  hash.each do |k, v|
+    if k == k.upcase
+      selected[k] = v
+    end
+  end
+
+  return selected
+end
+
+print select_upcase_keys({"make"=> "Tesla", "MODEL"=> "S", "Year"=> 2018, "SEATS"=> 4}) # => {"MODEL"=>"S", "SEATS"=>4}
+puts
+
+print select_upcase_keys({"DATE"=>"July 4th","holiday"=> "Independence Day", "type"=>"Federal"}) # => {"DATE"=>"July 4th"}
+puts
+
+
+# Write a method hand_score that takes in a string representing a hand of cards and returns it's total score. You can assume the letters in the string are only A, K, Q, J. A is worth 4 points, K is 3 points, Q is 2 points, and J is 1 point. The letters of the input string not necessarily uppercase.
+
+def hand_score(hand)
+  points = {
+    "A"=>4,
+    "K"=>3,
+    "Q"=>2,
+    "J"=>1
+  }
+
+  score = 0
+  hand.each_char { |char| score += points[char.upcase] }
+  return score
+end
+
+puts hand_score("AQAJ") #=> 11
+puts hand_score("jJka") #=> 9
+
+
